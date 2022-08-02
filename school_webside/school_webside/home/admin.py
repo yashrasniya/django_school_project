@@ -26,3 +26,15 @@ class admin_images(admin.ModelAdmin):
 @admin.register(school_basic_detail)
 class admin_school_basic_detail(admin.ModelAdmin):
     pass
+
+@admin.register(Facilities)
+class admin_Facilities(admin.ModelAdmin):
+    pass
+
+@admin.register(About_school)
+class admin_About_school(admin.ModelAdmin):
+    pass
+
+@admin.register(MainHeading)
+class admin_MainHeading(admin.ModelAdmin):
+    pass

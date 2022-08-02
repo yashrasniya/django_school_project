@@ -1,0 +1,33 @@
+ {% load static%}
+  <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Latest Blog</span></p>
+                <h1 class="mb-4">Latest Articles From Blog</h1>
+            </div>
+            <div class="row pb-3">
+                {% for i in blog %}
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0 shadow-sm mb-2">
+                        {% if i.blog_img %}
+                        <img class="card-img-top mb-2" src="{% static i.blog_img %}" alt="">
+                        {% else %}
+                        <img class="card-img-top mb-2" src="https://dominionmartialarts.com/wp-content/uploads/2017/04/default-image.jpg" alt="">
+                        {% endif %}
+                        <div class="card-body bg-light text-center p-4">
+                            <h4 class="">{{i.title}}</h4>
+                            <div class="d-flex justify-content-center mb-3">
+                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+
+                            </div>
+                            <p>{{i.detail}}</p>
+                            {% if i.file %}
+                            <a href="{%static i.file%}" class="btn btn-primary px-4 mx-auto my-2">Download</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+               {% endfor  %}
+            </div>
+        </div>
+    </div>

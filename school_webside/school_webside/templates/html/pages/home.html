@@ -1,0 +1,59 @@
+{% extends 'html/index.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+    {% for i in main_heading %}
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left">
+                <h4 class="text-white mb-4 mt-5 mt-lg-0">{{school_name}}</h4>
+                <h1 class="display-3 font-weight-bold text-white">{{i.title}}</h1>
+                <p class="text-white mb-4">{{i.about}}</p>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <img class="img-fluid mt-5" src="{% static i.images %}" alt="">
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+<!-- Facilities Start -->
+{% include "html/component/facilities.html" %}
+
+    <!-- Facilities end -->
+
+
+    <!-- About Start -->
+{% include "html/component/About.html" %}
+
+    <!-- About End -->
+
+
+    <!-- Class Start -->
+{% include "html/component/class.html" %}
+
+    <!-- Class End -->
+
+
+    <!-- Registration Start -->
+{% include "html/component/registration.html" %}
+
+    <!-- Registration End -->
+
+
+    <!-- Team Start -->
+{% include "html/component/team.html" %}
+
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+<!--{% include "html/component/testimonial.html" %}-->
+
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+{% include "html/component/blog.html" %}
+
+    <!-- Blog End -->
+
+{% endblock %}
