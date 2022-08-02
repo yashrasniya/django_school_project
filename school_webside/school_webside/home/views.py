@@ -13,6 +13,7 @@ def all_data():
     about = About_school.objects.all()
     main_heading = MainHeading.objects.all()
     img = images.objects.all()
+    school_logo=main_heading[:1:-1][0].school_logo
     data = {'school_name': 'SGSVMIC',
             'teachers': teachers[:4],
             'Facilities': f[:6],
@@ -21,7 +22,8 @@ def all_data():
             'school_detail': de[:1:-1],
             'about': about[:1:-1],
             'main_heading': main_heading[:1:-1],
-            'images': img}
+            'images': img,
+            'school_logo':school_logo}
     return data
 
 
