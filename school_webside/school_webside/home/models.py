@@ -62,6 +62,13 @@ class About_school(models.Model):
 class MainHeading(models.Model):
     title = models.CharField(max_length=32, blank=False, null=False)
     about = models.TextField(max_length=300, blank=False, null=False)
-    images=models.ImageField(upload_to='img/upload')
+    images = models.ImageField(upload_to='img/upload')
     school_logo = models.ImageField(upload_to='img/upload')
 
+
+class testimonial(models.Model):
+    person_name = models.CharField(max_length=32, blank=False, null=False)
+    person_profession = models.CharField(max_length=32, blank=False, null=False)
+    person_img = models.ImageField(upload_to='img/upload',blank=True)
+    testimonial_data = models.TextField(max_length=300, blank=False, null=False)
+    testimonial_verified = models.BooleanField( blank=False, null=False)

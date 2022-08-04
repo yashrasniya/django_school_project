@@ -1,0 +1,39 @@
+{% extends 'html/index.html' %}
+
+{% block content %}
+
+
+{% include "html/component/testimonial.html" %}
+<div class="contanier">
+
+
+<div class="row">
+    <div class="col ">
+        <form method="post" action="">
+            {%csrf_token%}
+            <table class="table">
+                <tr>
+                    <td>Enter your Name</td><td><input class="form-control col" type="text" name="name"></td>
+                    </tr><tr>
+                    <td>Enter your Profession</td><td><input class="form-control" type="text" name="profession"></td>
+                    </tr><tr>
+                <td>Enter your Testimonial</td><td><textarea  class="form-control" type="text" name="testimonial_data"></textarea></td>
+                   </tr><tr>
+
+                    <td><input class="btn btn-success" value="Save" type="submit"></td>
+                </tr>
+            </table>
+
+
+
+        </form>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+{% endblock %}

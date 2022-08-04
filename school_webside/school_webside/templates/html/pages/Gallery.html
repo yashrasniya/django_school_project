@@ -1,5 +1,6 @@
 {% extends 'html/index.html' %}
 {%load static %}
+
 {% block content %}
 <div class="container-fluid bg-primary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
@@ -22,65 +23,16 @@
                 {%for i in images %}
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="{% static i.images %}" alt="">
+                        <img class="img-fluid w-100" src="{{media_url}}/{{ i.images }}" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="{% static i.images %}" data-lightbox="portfolio">
+                            <a href="{{ media_url }}{{ i.images }}" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 {%endfor %}
-<!--                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">-->
-<!--                    <div class="position-relative overflow-hidden mb-2">-->
-<!--                        <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">-->
-<!--                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">-->
-<!--                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">-->
-<!--                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">-->
-<!--                    <div class="position-relative overflow-hidden mb-2">-->
-<!--                        <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">-->
-<!--                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">-->
-<!--                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">-->
-<!--                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">-->
-<!--                    <div class="position-relative overflow-hidden mb-2">-->
-<!--                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">-->
-<!--                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">-->
-<!--                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">-->
-<!--                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">-->
-<!--                    <div class="position-relative overflow-hidden mb-2">-->
-<!--                        <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">-->
-<!--                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">-->
-<!--                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">-->
-<!--                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">-->
-<!--                    <div class="position-relative overflow-hidden mb-2">-->
-<!--                        <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">-->
-<!--                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">-->
-<!--                            <a href="img/portfolio-6.jpg" data-lightbox="portfolio">-->
-<!--                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+
             </div>
         </div>
     </div>

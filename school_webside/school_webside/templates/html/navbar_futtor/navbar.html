@@ -19,6 +19,50 @@
                     <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
                 <a href="#Book_A_Seat" class="btn btn-primary px-4">Book Seat</a>
+               <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary ml-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add your Testimonial
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add your Testimonial</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+    <div class="col ">
+        <form method="post" action="">
+            {%csrf_token%}
+            <table class="table">
+                <tr>
+                    <td>Enter your Name</td><td><input class="form-control col" type="text" name="name"></td>
+                    </tr><tr>
+                    <td>Enter your Profession</td><td><input class="form-control" type="text" name="profession"></td>
+                    </tr><tr>
+                <td>Enter your Testimonial</td><td><textarea  class="form-control" type="text" name="testimonial_data"></textarea></td>
+                   </tr><tr>
+                <div class="modal-footer">
+                    <td><input class="btn btn-success" value="Save" type="submit"></td>
+                </div>
+
+                </tr>
+            </table>
+
+
+
+        </form>
+
+    </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
             </div>
         </nav>
     </div>

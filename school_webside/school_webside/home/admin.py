@@ -38,3 +38,7 @@ class admin_About_school(admin.ModelAdmin):
 @admin.register(MainHeading)
 class admin_MainHeading(admin.ModelAdmin):
     pass
+
+@admin.register(testimonial)
+class admin_MainHeading(admin.ModelAdmin):
+    pass
