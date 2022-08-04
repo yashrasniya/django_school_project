@@ -4,7 +4,7 @@
             {% for i in about%}
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img class="img-fluid rounded mb-5 mb-lg-0" src="{% static i.about_img1 %}" alt="">
+                    <img class="img-fluid rounded mb-5 mb-lg-0" src="{{media_url}}{{ i.about_img1 }}" alt="">
                 </div>
 
                 <div class="col-lg-7">
@@ -13,7 +13,7 @@
                     <p>{{i.about_detail}}</p>
                     <div class="row pt-2 pb-4">
                         <div class="col-6 col-md-4">
-                            <img class="img-fluid rounded" src="{% static i.about_img2 %}" alt="">
+                            <img class="img-fluid rounded" src="{{media_url}}{{ i.about_img2 }}" alt="">
                         </div>
                         <div class="col-6 col-md-8">
                             <ul class="list-inline m-0">

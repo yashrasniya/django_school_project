@@ -10,7 +10,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="card border-0 shadow-sm mb-2">
                         {% if i.blog_img %}
-                        <img class="card-img-top mb-2" src="{% static i.blog_img %}" alt="">
+                        <img class="card-img-top mb-2" src="{{media_url}}{{ i.blog_img }}" alt="">
                         {% else %}
                         <img class="card-img-top mb-2" src="https://dominionmartialarts.com/wp-content/uploads/2017/04/default-image.jpg" alt="">
                         {% endif %}

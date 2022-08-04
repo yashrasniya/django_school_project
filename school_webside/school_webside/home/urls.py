@@ -9,5 +9,6 @@ urlpatterns = [
     path('gallery', gallery_page),
     path('contact', contact_page),
     path('testimonial', testimonial_view),
+    path('blogs', blogs_page),
 
 ]

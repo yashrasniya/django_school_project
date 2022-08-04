@@ -18,7 +18,7 @@ def all_data():
     img = images.objects.all()
     school_logo = main_heading[:1:-1][0].school_logo
     data = {'school_name': 'SGSVMIC',
-            'teachers': teachers[:4],
+            'teachers': teachers[:4:-1],
             'Facilities': f[:6],
             'classes': c[:3],
             'blog': b[:3:-1],
@@ -38,11 +38,17 @@ def home_page(request):
 
 
 def teacher_page(request):
-    return render(request, 'html/pages/teachers.html', all_data())
+    teachers = Teachers.objects.all()
+    data = all_data()
+    data['teachers'] = teachers[::-1]
+    return render(request, 'html/pages/teachers.html', data)
 
 
 def classes_page(request):
-    return render(request, 'html/pages/class.html', all_data())
+    c = classes.objects.all()
+    data = all_data()
+    data['classes'] = c[::-1]
+    return render(request, 'html/pages/class.html', data)
 
 
 def about_page(request):
@@ -75,3 +81,10 @@ def testimonial_view(request):
     else:
 
         return render(request, 'html/pages/testimonial.html', all_data())
+
+
+def blogs_page(request):
+    c = blog.objects.all()
+    data = all_data()
+    data['blog'] = c[::-1]
+    return render(request, 'html/pages/blog.html', data)

@@ -10,7 +10,7 @@
                 <p class="text-white mb-4">{{i.about}}</p>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
-                <img class="img-fluid mt-5" src="{% static i.images %}" alt="">
+                <img class="img-fluid mt-5" src="{{media_url}}{{ i.images }}" alt="">
             </div>
         </div>
     {% endfor %}

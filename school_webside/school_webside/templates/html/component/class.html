@@ -9,7 +9,7 @@
                 {% for i in classes%}
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{% static i.class_img%}" alt="">
+                        <img class="card-img-top mb-2" src="{{media_url}}{{ i.class_img }}" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">{{i.class_name}}</h4>
                             <p class="card-text">{{i.class_description}}</p>
