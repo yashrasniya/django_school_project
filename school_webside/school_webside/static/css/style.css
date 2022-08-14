@@ -597,9 +597,7 @@ pre code {
 }
 
 .container,
-.container-fluid{
-width: 100%;
-},
+.container-fluid,
 .container-sm,
 .container-md,
 .container-lg,
