@@ -5,7 +5,8 @@ from .models import *
 # Register your models here.
 @admin.register(Teachers)
 class admin_teacher(admin.ModelAdmin):
-    pass
+
+    list_display = ['name','teaching_subject']
 
 
 @admin.register(classes)
