@@ -61,7 +61,7 @@ class About_school(models.Model):
 
 class MainHeading(models.Model):
     title = models.CharField(max_length=32, blank=False, null=False)
-    about = models.TextField(max_length=300, blank=False, null=False)
+    about = models.TextField(max_length=3000, blank=False, null=False)
     images = models.ImageField(upload_to='img/upload')
     school_logo = models.ImageField(upload_to='img/upload')
 
