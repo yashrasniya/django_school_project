@@ -4,16 +4,16 @@ from django.db import models
 # Create your models here.
 
 class Teachers(models.Model):
-    name = models.CharField(max_length=60, blank=False, null=False)
-    teaching_subject = models.CharField(max_length=60, blank=False, null=False)
+    name = models.CharField(max_length=600, blank=False, null=False)
+    teaching_subject = models.CharField(max_length=600, blank=False, null=False)
     Social_media_id = models.URLField(blank=True)
     img = models.ImageField()
     Experience = models.IntegerField(blank=True)
 
 
 class classes(models.Model):
-    class_name = models.CharField(max_length=60, blank=False, null=False)
-    class_description = models.TextField(max_length=256, blank=False, null=False)
+    class_name = models.CharField(max_length=600, blank=False, null=False)
+    class_description = models.TextField(max_length=2560, blank=False, null=False)
     class_times = models.CharField(max_length=60, blank=False, null=False)
     fee = models.IntegerField(blank=False, null=False)
     class_img = models.ImageField(blank=True)
@@ -60,7 +60,7 @@ class About_school(models.Model):
 
 
 class MainHeading(models.Model):
-    title = models.CharField(max_length=32, blank=False, null=False)
+    title = models.CharField(max_length=320, blank=False, null=False)
     about = models.TextField(max_length=3000, blank=False, null=False)
     images = models.ImageField(upload_to='img/upload')
     school_logo = models.ImageField(upload_to='img/upload')
