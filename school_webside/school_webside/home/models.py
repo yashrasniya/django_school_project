@@ -34,7 +34,7 @@ class school_basic_detail(models.Model):
     about_school = models.TextField(max_length=500, blank=False, null=False)
     contact_description = models.TextField(max_length=500, blank=False, null=False)
     opening_Hours = models.TextField(max_length=500, blank=False, null=False)
-    address = models.CharField(max_length=60, blank=False, null=False)
+    address = models.CharField(max_length=600, blank=False, null=False)
     email = models.EmailField(blank=True)
     phone = models.CharField(max_length=12, blank=False, null=False)
     Facebook = models.URLField(blank=True)
