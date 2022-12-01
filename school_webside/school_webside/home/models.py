@@ -50,7 +50,7 @@ class Facilities(models.Model):
 
 
 class About_school(models.Model):
-    title = models.CharField(max_length=32, blank=False, null=False)
+    title = models.CharField(max_length=320, blank=False, null=False)
     about_detail = models.TextField(max_length=3200, blank=False, null=False)
     about_img1 = models.ImageField(upload_to='img/upload')
     about_img2 = models.ImageField(upload_to='img/upload')
