@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'seat_booling'
+    'seat_booling',
+    'documents'
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,15 @@
+{% extends 'admin/change_list.html' %}
+
+{% block object-tools %}
+    <div>
+        <a href="http://www.google.com">hello</a>
+        {% for result in result_headers %}
+        {% for i in results %}
+        <h1>{{i}}</h1>
+        {%endfor%}
+        {%endfor%}
+
+    </div>
+    <br />
+    {{ block.super }}
+{% endblock %}
