@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import *
 from django.conf import settings
 from .models import *
+from documents.models import *
 
 
 # Create your views here.
@@ -17,6 +18,7 @@ def all_data():
     main_heading = MainHeading.objects.all()
     img = images.objects.all()
     school_logo = main_heading[:1:-1][0].school_logo
+    documents=Document.objects.filter(show=True)
     data = {'school_name': 'SGSVMIC',
             'teachers': teachers[:4:-1],
             'Facilities': f[:6],
@@ -28,7 +30,8 @@ def all_data():
             'images': img,
             'school_logo': school_logo,
             'media_url': media_url,
-            'testimonial': tes[:10:-1]}
+            'testimonial': tes[:10:-1],
+            'documents':documents}
     return data
 
 
