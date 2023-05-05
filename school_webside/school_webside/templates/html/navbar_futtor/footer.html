@@ -59,7 +59,7 @@
                 <div class="d-flex flex-column justify-content-start">
 
                     {% for j in documents %}
-                    <a class="text-white mb-2" href="{{j.File}}"><i class="fa fa-angle-right mr-2"></i>{{j.title}}</a>
+                    <a class="text-white mb-2" href="{{j.File.url}}"><i class="fa fa-angle-right mr-2"></i>{{j.title}}</a>
                   {% endfor %}
                 </div>
             </div>
