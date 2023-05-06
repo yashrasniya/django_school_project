@@ -10,5 +10,6 @@ urlpatterns = [
     path('contact', contact_page),
     path('testimonial', testimonial_view),
     path('blogs', blogs_page),
+    path('public_disclosure', public_disclosure),
 
 ]

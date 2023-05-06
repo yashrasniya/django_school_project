@@ -91,3 +91,7 @@ def blogs_page(request):
     data = all_data()
     data['blog'] = c[::-1]
     return render(request, 'html/pages/blog.html', data)
+
+def public_disclosure(request):
+    return render(request, 'html/pages/public_disclosure.html', all_data()
+                  )
