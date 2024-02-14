@@ -23,6 +23,7 @@ class blog(models.Model):
     title = models.CharField(max_length=300, blank=False, null=False)
     detail = models.TextField(max_length=3000, blank=False, null=False)
     blog_img = models.ImageField(blank=True)
+    link=models.URLField(blank=True)
     file = models.FileField(blank=True)
 
 
